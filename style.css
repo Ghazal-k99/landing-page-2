@@ -40,12 +40,17 @@
     
 }
 
+/* html{
+    direction: rtl;
+} */
+
 /* Nav bar */
 .nav{
     font-size: var(--fs-15);
     font-family: var(--ff-poppins);
     font-weight: var(--fw-semibold);
     color: var(--clr-black);
+    
 }
 
 /* Hero section */
@@ -76,6 +81,7 @@
 .btn-danger{
     background-color: var(--clr-red);
     padding: 12px;
+    box-shadow: 5px 5px 15px rgba(176, 0, 0, 0.5);
 }
 
 .pagination-icon{
@@ -210,6 +216,19 @@
     border-radius: 15px;
     width: 300px;
     padding: 30px;
+    transition: opacity 0.35s ease, transform 0.35s ease; 
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+.plan-card.hide {
+  opacity: 0;
+  transform: translateY(8px) scale(0.98);
+  pointer-events: none; 
+}
+
+.plan-card  ul{
+    padding-top: 20px;
 }
 
 .plan-card h5{
@@ -389,6 +408,7 @@
 
 .awesome-content{
     max-width: 800px;
+    gap: 30px;
 }
 
 .awesome-content h2{
@@ -401,6 +421,10 @@
     font-family: var(--ff-poppins);
     font-size: var(--fs-14);
     font-weight: var(--fw-regular);
+}
+
+.whatsapp-btn{
+    padding-bottom: 0px;
 }
 
 /* Footer */
@@ -444,12 +468,28 @@ footer p{
         text-align: center;
     }
 
+    .hero-text p{
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero-btns{
+        justify-content: center;
+        align-self: center;
+    }
+
     .hero-section{
         width: 100%;
         gap: 20px;
         text-align: center;
         align-items: center !important;   
         text-align: center !important; 
+    }
+
+    .pagination-icon{
+        padding: 0;
     }
 
     .true-cloud-web-sec-text{
@@ -468,6 +508,8 @@ footer p{
         width: 250px;
     
     }
+
+   
 
     .tab-bar .nav-link{
         padding: 3px 50px 2px 50px;
@@ -532,6 +574,25 @@ footer p{
         text-align: center;
     }
 
+    .footer-content{
+        text-align: center;
+        padding: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+    }
+   
+    .sosial-media-icon{
+        
+        justify-content: center;
+        align-items: center;
+    }
+
+    footer p{
+        text-align: center;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
@@ -594,7 +655,19 @@ footer p{
     inset-inline-start: -100px; 
 }
 
-.our-services-swiper::after {
-    inset-inline-end: -100px;
+    .our-services-swiper::after {
+        inset-inline-end: -100px;
 }
+
+    .first-column-conten{
+        justify-content: center !important;
+        align-items: center !important;
+        
+}
+
+    .first-column-container{
+        justify-content: center !important;
+        align-items: center !important;
+        padding-bottom: 20px;
+    }
 }
